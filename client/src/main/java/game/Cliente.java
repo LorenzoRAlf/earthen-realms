@@ -353,7 +353,6 @@ public class Cliente extends JFrame {
 				
 				try {
 					//set damage que va a recibir, primero hacemos el calculo y luego lo enviamos//
-					
 					//calculamos el daño sin la armadura//
 					if (damagetype == 1) {
 						danojugador = armaJugador.getDamage()/2;
@@ -386,78 +385,61 @@ public class Cliente extends JFrame {
 						if (tipoa.equals("Electric")) {
 							if (tipor.equals("Rock")) {
 								danojugador = danojugador * 2;
-								danojugador = danojugador * (100/(100+armaduraRival.getDefense()));
+								danojugador = (danojugador * 100)/(100+armaduraRival.getDefense());
 							} else if (tipor.equals("Water")) {
 								danojugador = danojugador / 2;
-								danojugador = danojugador * (100/(100+armaduraRival.getDefense()));
-								if (danojugador == 0) {
-									danojugador = 5;
-								}
+								danojugador = (danojugador * 100)/(100+armaduraRival.getDefense());
 							}
 						} else if (tipoa.equals("Water")) {
 							if (tipor.equals("Electric")) {
 								danojugador = danojugador * 2;
-								danojugador = danojugador * (100/(100+armaduraRival.getDefense()));
+								danojugador = (danojugador * 100)/(100+armaduraRival.getDefense());
 							} else if (tipor.equals("Fire")) {
 								danojugador = danojugador / 2;
-								danojugador = danojugador * (100/(100+armaduraRival.getDefense()));
-								if (danojugador == 0) {
-									danojugador = 5;
-								}
+								danojugador = (danojugador * 100)/(100+armaduraRival.getDefense());
 							}
 						} else if (tipoa.equals("Rock")) {
 							if (tipor.equals("Grass")) {
 								danojugador = danojugador * 2;
-								danojugador = danojugador * (100/(100+armaduraRival.getDefense()));
+								danojugador = (danojugador * 100)/(100+armaduraRival.getDefense());
 							} else if (tipor.equals("Electric")) {
 								danojugador = danojugador / 2;
-								danojugador = danojugador * (100/(100+armaduraRival.getDefense()));
-								if (danojugador == 0) {
-									danojugador = 5;
-								}
+								danojugador = (danojugador * 100)/(100+armaduraRival.getDefense());
 							}
 						} else if (tipoa.equals("Fire")) {
 							if (tipor.equals("Water")) {
 								danojugador = danojugador * 2;
-								danojugador = danojugador * (100/(100+armaduraRival.getDefense()));
+								danojugador = (danojugador * 100)/(100+armaduraRival.getDefense());
 							} else if (tipor.equals("Grass")) {
 								danojugador = danojugador / 2;
-								danojugador = danojugador * (100/(100+armaduraRival.getDefense()));
-								if (danojugador == 0) {
-									danojugador = 5;
-								}
+								danojugador = (danojugador * 100)/(100+armaduraRival.getDefense());
 							} 
 						} else if (tipoa.equals("Grass")) {
 							if (tipor.equals("Fire")) {
 								danojugador = danojugador * 2;
-								danojugador = danojugador * (100/(100+armaduraRival.getDefense()));
+								danojugador = (danojugador * 100)/(100+armaduraRival.getDefense());
 							} else if (tipor.equals("Rock")) {
 								danojugador = danojugador / 2;
-								danojugador = danojugador * (100/(100+armaduraRival.getDefense()));
-								if (danojugador == 0) {
-									danojugador = 5;
-								}
+								danojugador = (danojugador * 100)/(100+armaduraRival.getDefense());
 							}
 						} else if (tipoa.equals("Light")) {
 							if (tipor.equals("Dark")) {
 								danojugador = danojugador * 3;
-								danojugador = danojugador * (100/(100+armaduraRival.getDefense()));
-								if (danojugador == 0) {
-									danojugador = 5;
-								}
+								danojugador = (danojugador * 100)/(100+armaduraRival.getDefense());
+							} else {
+								danojugador = (int) (danojugador * 0.75);
+								danojugador = (danojugador * 100)/(100+armaduraRival.getDefense());
 							}
 						} else if (tipoa.equals("Dark")) {
 							if (tipor.equals("Light")) {
 								danojugador = danojugador * 3;
-								danojugador = danojugador * (100/(100+armaduraRival.getDefense()));
-								if (danojugador == 0) {
-									danojugador = 5;
-								}
+								danojugador = (danojugador * 100)/(100+armaduraRival.getDefense());
+							} else {
+								danojugador = (int) (danojugador * 0.75);
+								danojugador = (danojugador * 100)/(100+armaduraRival.getDefense());
 							}
 						}
 					}
-					
-					System.out.println(danojugador);
 					
 					
 					//Enviamos el daño//

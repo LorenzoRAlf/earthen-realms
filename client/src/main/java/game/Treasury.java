@@ -123,7 +123,7 @@ public class Treasury extends JFrame {
 		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 20));
 		panel.add(lblNewLabel);
 		
-		JButton btnNewButton_2 = new JButton("Retunr");
+		JButton btnNewButton_2 = new JButton("Return");
 		btnNewButton_2.setBackground(new Color(160, 82, 45));
 		btnNewButton_2.setForeground(new Color(222, 184, 135));
 		btnNewButton_2.addMouseListener(new MouseAdapter() {
@@ -150,7 +150,7 @@ public class Treasury extends JFrame {
 		} catch (IOException e1) {
 			e1.printStackTrace();
 		}
-		JLabel coins = new JLabel("0 coins");
+		JLabel coins = new JLabel(coinsd.coins + " coins");
 		coins.setFont(new Font("Tahoma", Font.BOLD, 11));
 		coins.setForeground(new Color(160, 82, 45));
 		panel.add(coins, BorderLayout.WEST);
@@ -205,7 +205,6 @@ public class Treasury extends JFrame {
 							repaint();
 							
 							for (int i = 0; i < weapons.size(); i++) {
-								System.out.println();
 								if (weapons.get(i).textValue().equals(arma.getId())){
 									hasit = true;
 								}

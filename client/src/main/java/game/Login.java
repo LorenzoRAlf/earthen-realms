@@ -16,6 +16,7 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
 import javax.swing.JPanel;
+import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 
@@ -66,7 +67,7 @@ public class Login extends JFrame {
 		contentPane.add(Usuario);
 		Usuario.setColumns(10);
 		
-		Contrasena = new JTextField();
+		Contrasena = new JPasswordField();
 		Contrasena.setBounds(209, 136, 102, 20);
 		contentPane.add(Contrasena);
 		Contrasena.setColumns(10);
